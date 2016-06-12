@@ -31300,6 +31300,72 @@ define("angular", (function (global) {
 
 		$scope.init = function (configName) {
 
+
+
+var leslieAndChristopherText = ['\nPlease click the screen to start.',
+		'\n\nType in the word "help" (without quotes) to see availible commands'];
+
+				var asciiAnimation1 = function () {
+
+					var deferred = $q.defer();
+
+					setTimeout(function (){
+						deferred.resolve(
+						{
+							'outText' : leslieAndChristopherText
+						});
+					}, 1);
+
+
+					return deferred.promise;
+				};
+
+				var clearAnimation = function () {
+					var deferred = $q.defer();
+
+
+
+					setTimeout(function () {
+						$scope.$broadcast('terminal-command', {"command":"clear"});
+						$scope.safeApply();
+						deferred.resolve();
+					}, 1500);
+
+					return deferred.promise;
+				};
+
+				var completeAnimation = function () {
+					var deferred = $q.defer();
+
+
+
+					setTimeout(function () {
+						$scope.introComplete = true;
+						$scope.safeApply();
+						deferred.resolve();
+					}, 1500);
+
+					return deferred.promise;
+				};
+
+			asciiAnimation1().then(function(data){
+					$scope.$broadcast('terminal-output', {
+						output: true,
+						text:data.outText,
+						breakLine: true
+					});
+					$scope.safeApply();
+
+					return completeAnimation();
+				}).then(function(){});
+
+
+
+
+
+
+
+
 			var config = $terminalConfiguration(configName);
 			$scope.prompt = $promptCreator(config);
 			$scope.outputDelay = config.outputDelay;
