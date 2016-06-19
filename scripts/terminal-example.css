@@ -1,0 +1,58 @@
+body{
+	background:linear-gradient(135deg, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%);;
+}
+
+
+@media (min-width: 768px){
+	.container {
+	    max-width: 730px;
+	}
+}
+@media (min-width: 1200px){
+	.container {
+	    width: 1170px;
+	}	
+}
+@media (min-width: 992px){
+	.container {
+	    width: 970px;
+	}
+}
+@media (min-width: 768px){
+	.container {
+	    width: 750px;
+	}	
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+.header h1{
+	color:yellow;
+}
+
+.header .gitHub{
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    text-decoration: none;
+    width: 134px;
+    height: 58px;
+    display: block;
+    font-size: 17px;
+    color: #fff;
+    padding-left: 68px;
+    padding-top: 22px;
+    background: rgba(0, 0, 0, 0) url(http://vtortola.github.io/WebSocketListener/images/github-button.png) 0 0 no-repeat;
+}
+
+.terminal-box{
+	height:400px;
+	overflow-y:hidden;
+}

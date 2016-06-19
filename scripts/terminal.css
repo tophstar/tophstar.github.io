@@ -40,8 +40,6 @@
   overflow-x: hidden;
   overflow-y: hidden;
   font-size: 12px;
-  position: relative;
-  padding: 10px;
 }
 #terminal-element .terminal-container .terminal-target {
   vertical-align: bottom;
@@ -58,8 +56,12 @@
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 0;
+}
+#terminal-element .terminal-container .terminal-viewport span.terminal-prompt,
+#terminal-element .terminal-container .terminal-viewport div.terminal-results {
+  padding: 10px 0 0 10px;
 }
 #terminal-element .terminal-container .terminal-cursor {
   visibility: visible;

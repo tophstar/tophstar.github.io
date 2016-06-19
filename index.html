@@ -1,14 +1,30 @@
-<script src="scripts/jquery.min.js"></script>
-<script src="scripts/require.js" data-main="scripts/terminal-harness"></script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="scripts/terminal.css">
+    <link rel="stylesheet" type="text/css" href="scripts/terminal-example.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+
+            <h1> lib-ng-terminal </h1>
+
+            <a href="https://github.com/tophstar/lib-ng-terminal" class="gitHub">
+                <small>View project on</small>
+                GitHub
+            </a>
+        </section>
+
+        <section class="terminal-box">
+            <div id="terminal-element"></div>
+        </section>
+
+    </div>
 
 
-<link rel="stylesheet" type="text/css" href="scripts/terminal.css">
-
-<style type="text/css">
-    html, body {
-        height:100%;
-        margin:0;
-    }
-</style>
-
-<div id="terminal-element"></div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/require.js" data-main="scripts/terminal-harness"></script>
+</body>
